@@ -1,7 +1,6 @@
 #include <iostream>
 #include <map>
 
-//#include "calculator.h"
 template <typename T>
 class Arithmetic_operations
 {
@@ -26,7 +25,6 @@ public:
 
 int main()
 {
-   
     int (Arithmetic_operations<int>:: * ptfptr_sum) (int, int) = &Arithmetic_operations<int>::sum;
     int (Arithmetic_operations<int>:: * ptfptr_m) (int, int) = &Arithmetic_operations<int>::mul;
     int (Arithmetic_operations<int>:: * ptfptr_d) (int, int) = &Arithmetic_operations<int>::divide;
@@ -35,7 +33,6 @@ int main()
     Arithmetic_operations<int> ob;
     int a, b;
     char symb;
-
   
    std:: cin >> a >> symb >> b;
    std:: map<char, int> mp;
@@ -50,5 +47,4 @@ int main()
            std::cout << it->first << " "<< it->second << "\n";
        }
 
-  // std:: cout << mp[symb](a, b);
 }
